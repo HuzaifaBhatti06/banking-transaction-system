@@ -71,4 +71,18 @@ public class LinkedQueue {
     public int size() {
         return size;
     }
+
+    public Transaction[] getAll() {
+    Transaction[] result = new Transaction[size];
+    Node current = front;
+    int index = 0;
+
+    while (current != null) {
+        result[index] = current.data;
+        index++;
+        current = current.next;
+    }
+
+    return result;
+}
 }
