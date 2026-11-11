@@ -22,7 +22,6 @@ public class TransactionValidator {
             }
             return "";
         }
-
         if (t.getType().equals(Transaction.WITHDRAWAL)) {
             if (!isUsable(t.getSourceAccount())) {
                 return "Source account not found or inactive";
